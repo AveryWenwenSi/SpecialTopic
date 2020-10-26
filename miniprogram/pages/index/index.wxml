@@ -1,0 +1,148 @@
+<!--pages/index/index.wxml-->
+
+<van-row wx:if="{{showtitle}}">
+  <van-col offset="2" style='font-weight: bold; font-size: 42rpx; color: red;' span="6">事实记录</van-col>
+  <van-col offset="1" span="2" style="font-size: 30rpx;">权重</van-col>
+  <van-col offset="1" span="6" style="font-size: 30rpx;">拜登得分</van-col>
+  <van-col span="4" style="font-size: 30rpx;">川普得分</van-col>
+</van-row>
+<van-image
+  width="23.5rem"
+  height="8rem"
+  fit="contain"
+  src="/images/party.png"
+/>
+<van-image
+  width="23.5rem"
+  height="10rem"
+  fit="contain"
+  src="/images/trump-v-biden.jpg"
+/>
+
+<van-row style='font-weight: bold; font-size: 90rpx; color: grey;font-family:Arial;'>
+  <van-col offset="4" span="8">54%</van-col>
+  <van-col offset="3" span="8">47%</van-col>
+</van-row>
+
+<van-collapse accordion value="1" >
+  <van-collapse-item title="个人黑料" name="1">
+    <van-row>
+      <van-col span="12">
+      外媒: 对待疫情持“啦啦队”态度:知情不报， 控制股市。
+对待疫情前后态度自相矛盾。
+
+有白人至上的种族主义之嫌，在疫情， 全球气候的问题上撒谎和立场不坚定。
+国内媒体: 特朗普纳税单揭露其2016年竞选资金疑点。
+年缴750美元税款。
+美国共和党参议员本·萨斯在一则泄露的 音频中狂喷特朗普将近10分钟。</van-col>
+      <van-col span="12">span: 8</van-col>
+    </van-row>
+  </van-collapse-item>
+  <van-collapse-item title="副手对弈" name="2">
+    网店吸粉获客、会员分层营销、一机多种收款，告别经营低效和客户流失
+  </van-collapse-item>
+  <van-collapse-item title="对华政策" name="3">
+    线上拓客，随时预约，贴心顺手的开单收银
+  </van-collapse-item>
+  <van-collapse-item title="妇女权益" name="3">
+    线上拓客，随时预约，贴心顺手的开单收银
+  </van-collapse-item>
+  <van-collapse-item title="新冠疫情" name="3">
+    线上拓客，随时预约，贴心顺手的开单收银
+  </van-collapse-item>
+  <van-collapse-item title="政绩历史" name="3">
+    线上拓客，随时预约，贴心顺手的开单收银
+  </van-collapse-item>
+  <van-collapse-item title="健康问题" name="3">
+    线上拓客，随时预约，贴心顺手的开单收银
+  </van-collapse-item>
+  <van-collapse-item title="选民构成" name="3">
+    线上拓客，随时预约，贴心顺手的开单收银
+  </van-collapse-item>
+  <van-collapse-item title="选民状况" name="3">
+    线上拓客，随时预约，贴心顺手的开单收银
+  </van-collapse-item>
+  <van-collapse-item title="竞选策略" name="3">
+    线上拓客，随时预约，贴心顺手的开单收银
+  </van-collapse-item>
+</van-collapse>
+
+<van-row wx:if="{{showtitle}}">
+  <van-col offset="2" style='font-weight: bold; font-size: 42rpx; color: red;' span="6">引经据典</van-col>
+  <van-col offset="1" span="2" style="font-size: 30rpx;">权重</van-col>
+  <van-col offset="1" span="6" style="font-size: 30rpx;">拜登得分</van-col>
+  <van-col span="4" style="font-size: 30rpx;">川普得分</van-col>
+</van-row>
+
+<swiper class='movie-swiper' indicator-dots='{{true}}'
+   previous-margin="20rpx" next-margin="20rpx"
+   current='{{currentIndex}}'
+  >
+    <swiper-item class='movie' wx:for="{{weeklyMovieList}}">
+          <view class='container movie-card'
+            bindtap='f1' 
+            data-user-name="blabla"
+            data-movie-id="{{item.id}}"
+            >
+            <van-row>
+              <van-col offset="1" span="11">
+                <image class='movie-image' src='{{item.imagePath}}'></image>
+                  <text>{{item.name}}</text> 
+                  <text>点评：{{item.comment}}
+                  </text> 
+                  <text>{{item.content}}
+                  </text> 
+              </van-col>
+              <van-col offset="1" span="11">
+                  <text>点评：{{item.comment}} 
+                  </text> 
+                  <text>{{item.content}}
+                  </text> 
+              </van-col>
+            </van-row>
+          </view>
+        </swiper-item>
+  </swiper>
+
+<van-row wx:if="{{showtitle}}">
+  <van-col offset="2" style='font-weight: bold; font-size: 42rpx; color: red;' span="6">数据海岸</van-col>
+  <van-col offset="1" span="2" style="font-size: 30rpx;">权重</van-col>
+  <van-col offset="1" span="6" style="font-size: 30rpx;">拜登得分</van-col>
+  <van-col span="4" style="font-size: 30rpx;">川普得分</van-col>
+</van-row>
+<swiper class='cloud-swiper' style='background: #eee' indicator-dots='{{false}}'
+   previous-margin="20rpx" next-margin="20rpx"
+   current='{{cloudIndex}}'>
+   <swiper-item wx:for="{{clouds}}"><van-image
+      width="22rem"
+      height="14rem"
+      fit="contain"
+      src="{{item}}"
+    /></swiper-item>
+</swiper>
+<van-row wx:if="{{showtitle}}">
+  <van-col offset="2" style='font-weight: bold; font-size: 42rpx; color: red;' span="6">实践真知</van-col>
+  <van-col offset="1" span="2" style="font-size: 30rpx;">权重</van-col>
+  <van-col offset="1" span="6" style="font-size: 30rpx;">拜登得分</van-col>
+  <van-col span="4" style="font-size: 30rpx;">川普得分</van-col>
+</van-row>
+<van-card
+  desc="“三权分立”一直是美国政治制度的最主要特征之一，也被美国政治精英认为是其民主政治的先进之处和优势所在。不过，最近美国国内政治却出现了不小的问题。由于美国总统特朗普宣布国家进入紧急状态，在民主党依靠其多数优势控制的众议院通过一项取消国家紧急状态的决议后，佩洛西等人正寻求参议院也能通过这一决议。不过，特朗普对此表示他将毫不犹豫否决议会的这个决议，而这似乎仍不是“终点站”。"
+  title="实践真知"
+  thumb="/images/shijianzhenzhi.png"
+/>
+
+<van-row wx:if="{{showtitle}}">
+  <van-col offset="2" style='font-weight: bold; font-size: 42rpx; color: red;' span="6">我的预测</van-col>
+  <van-col offset="1" span="2" style="font-size: 30rpx;">权重</van-col>
+  <van-col offset="1" span="6" style="font-size: 30rpx;">拜登得分</van-col>
+  <van-col span="4" style="font-size: 30rpx;">川普得分</van-col>
+</van-row>
+
+
+<view class="question-card">
+  <van-count-down style='font-weight: bold;' time="{{ time }}" format="DD 天 HH 时 mm 分 ss 秒" />
+  <text class="quetion-text" style='font-weight: bold; font-size: 42rpx;'>谁能赢？</text>
+  <van-button type="primary" size="normal" block>川普赢</van-button>
+  <van-button type="primary" size="normal" block>拜登赢</van-button>
+</view>

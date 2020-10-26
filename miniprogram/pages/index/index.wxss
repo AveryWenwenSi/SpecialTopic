@@ -1,0 +1,44 @@
+/* pages/index/index.wxss */
+.movie {
+  display: flex;
+}
+.movie-swiper {
+  height: 75vh; 
+  margin-top: 50rpx;
+}
+
+.movie-image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.question-card {
+  height: 45vh; 
+  margin-top: 50rpx;
+  text-align: center;
+  background: #efc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 15rpx;
+}
+
+.question-text{
+  display: block;
+}
+
+.movie-card {
+  height: 100%;
+  width: 100%;
+  background: #eee;
+  margin: 0 15rpx;
+  position: relative;
+  display: flex;
+  font-size: 24rpx;
+}
+
+.cloud-swiper {
+  height: 40vh; 
+  margin-top: 50rpx;
+}
+

@@ -1,0 +1,14 @@
+/* pages/datagulf/datagulf.wxss */
+.container {
+  background-color: #FAEBD7;
+ }
+  
+ .txt-light {
+  color: #acadbe;
+ }
+  
+
+ .cloud-swiper {
+  height: 40vh; 
+  margin-top: 50rpx;
+}
